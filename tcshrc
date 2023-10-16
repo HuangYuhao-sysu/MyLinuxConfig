@@ -1,0 +1,55 @@
+# -------------------------------------------------- #
+#                                                    #
+#                                                    #
+#                 (Yuhao .tcshrc)                    #
+#                                                    #
+#               Copyright (c) 2023                   #
+#               All Rights Reserved.                 #
+#                                                    #
+#                                /\_/\               #
+#            Designed by Yuhao  ( o.o )              #
+#                                > ^ <               #
+#                                                    #
+# -------------------------------------------------- #
+
+# ------------------------- #
+# Set environment variables #
+# ------------------------- #
+setenv http_proxy http://127.0.0.1:38457
+setenv https_proxy http://127.0.0.1:38457
+
+# ------------------------- #
+# --Aliases and Shortcuts-- #
+# ------------------------- #
+alias setprompt 'set prompt = "%B%n@%m ${cwd} >"'
+alias cd 'chdir \!* && setprompt && ll'
+alias g gvim
+alias q cd ..
+alias qq cd ../..
+alias la 'ls -la | more'
+alias ld 'ls -la | grep ^d'
+alias lt 'ls -lat | more'
+alias h 'history 50 | more'
+alias sc source ~/.tcshrc
+alias cs gvim ~/.tcshrc
+alias gst git status -uno
+alias gco git checkout
+alias gl git log
+alias gpush git push origin master
+alias gpull git pull --rebase
+alias hyh cd ~/Desktop
+
+# ------------------------- #
+# ---Customize the prompt-- #
+# ------------------------- #
+set prompt = "%B%n@%m ${cwd} >"
+
+# ------------------------- #
+# ----Define functions----- #
+# ------------------------- #
+
+
+# ------------------------- #
+# ---------Set up---------- #
+# ------------------------- #
+hyh
