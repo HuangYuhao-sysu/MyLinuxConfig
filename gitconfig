@@ -1,3 +1,7 @@
+[user]
+    name = HuangYuhao-sysu
+    email = 1823551220@qq.com
+
 [color]
     ui = auto
 
@@ -46,6 +50,6 @@
     func = green dim
 
 [color "status"]
-    added = yellow
-    changed = green
+    added = green
+    changed = red
     untracked = cyan

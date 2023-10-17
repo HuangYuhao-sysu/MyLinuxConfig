@@ -34,10 +34,11 @@ alias sc source ~/.tcshrc
 alias cs gvim ~/.tcshrc
 alias gst git status -uno
 alias gco git checkout
-alias gl git log
-alias gpush git push origin master
+alias gl git log --decorate
+alias gpush git push origin main
 alias gpull git pull --rebase
 alias hyh cd ~/Desktop
+alias vimrc gvim ~/.vimrc
 
 # ------------------------- #
 # ---Customize the prompt-- #
