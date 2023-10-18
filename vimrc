@@ -24,7 +24,7 @@ call vundle#begin()
 
 
 Plugin 'VundleVim/Vundle.vim'       " let Vundle manage Vundle, required
-
+Plugin 'scrooloose/nerdtree'        " The NERD tree.
 
 call vundle#end()                   " required
 filetype plugin indent on           " required
@@ -70,7 +70,7 @@ colorscheme desert                  " Set color scheme.
 " ------------------------- "
 " ---Bindings & Commands--- "
 " ------------------------- "
-
+nnoremap <F4> :NERDTreeToggle<CR>
 
 " ------------------------- "
 " ----File Type Settings--- "
