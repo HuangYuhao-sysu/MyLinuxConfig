@@ -75,6 +75,12 @@ colorscheme gruvbox                 " Set color scheme.
 " ---Bindings & Commands--- "
 " ------------------------- "
 nnoremap <F4> :NERDTreeToggle<CR>
+inoremap " ""<left>
+inoremap ' ''<left>
+inoremap ( ()<left>
+inoremap [ []<left>
+inoremap < <><left>
+inoremap { {}<left>
 
 " ------------------------- "
 " ----File Type Settings--- "
