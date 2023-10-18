@@ -23,8 +23,9 @@ set rtp+=~/.vim/bundle/Vundle.vim   " set the runtime path to include Vundle and
 call vundle#begin()
 
 
-Plugin 'VundleVim/Vundle.vim'       " let Vundle manage Vundle, required
+Plugin 'VundleVim/Vundle.vim'       " let Vundle manage Vundle, required.
 Plugin 'scrooloose/nerdtree'        " The NERD tree.
+Plugin 'morhetz/gruvbox'            " Retro groove color scheme for vim.
 
 call vundle#end()                   " required
 filetype plugin indent on           " required
@@ -63,8 +64,9 @@ syntax enable                       " Syntax highlight on.
 " ------------------------- "
 " ---Theme & Appearance---- "
 " ------------------------- "
-
-colorscheme desert                  " Set color scheme.
+set background=dark
+let g:gruvbox_contrast_dark  = "soft"
+colorscheme gruvbox                 " Set color scheme.
 
 
 " ------------------------- "
