@@ -27,6 +27,7 @@ Plugin 'VundleVim/Vundle.vim'       " Let Vundle manage Vundle, required.
 Plugin 'scrooloose/nerdtree'        " The NERD tree.
 Plugin 'morhetz/gruvbox'            " Retro groove color scheme for vim.
 Plugin 'yggdroot/indentline'        " A vim plugin to display the indention levels with thin vertical lines.
+"Plugin 'tpope/vim-surround'         " Surround.vim: quoting/parenthesizing made simple
 
 call vundle#end()                   " required
 filetype plugin indent on           " required
