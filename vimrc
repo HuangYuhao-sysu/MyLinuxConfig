@@ -32,11 +32,11 @@ Plugin 'MarcWeber/vim-addon-mw-utils'   " For snipmate.
 Plugin 'tomtom/tlib_vim'
 Plugin 'garbas/vim-snipmate'
 Plugin 'honza/vim-snippets'             " Vim-snipmate default snippets (Previously snipmate-snippets).
+Plugin 'vhda/verilog_systemverilog.vim' " Verilog and SystemVerilog syntax plugin.
 
 call vundle#end()                       " required
 filetype plugin indent on               " required
 
-"
 " Brief help
 " :PluginList       - lists configured plugins
 " :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
@@ -84,18 +84,18 @@ colorscheme gruvbox                 " Set color scheme.
 " ------------------------- "
 
 nnoremap <F4> :NERDTreeToggle<CR>
-"inoremap " ""<left>
-"inoremap ' ''<left>
-"inoremap ( ()<left>
-"inoremap [ []<left>
-"inoremap < <><left>
-"inoremap { {}<left>
+inoremap " ""<left>
+inoremap ' ''<left>
+inoremap ( ()<left>
+inoremap [ []<left>
+inoremap < <><left>
+inoremap { {}<left>
 
 " ------------------------- "
 " ----File Type Settings--- "
 " ------------------------- "
 
-au BufRead,BufNewFile *.sv set filetype=systemverilog   " SystemVerilog file type detection
+au BufRead,BufNewFile *.sv *.v *.vh *.svh setfiletype=verilog_systemverilog " SystemVerilog file type detection
 
 " ------------------------- "
 " -----Other Settings------ "
