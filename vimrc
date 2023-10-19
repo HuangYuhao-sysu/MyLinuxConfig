@@ -17,19 +17,24 @@
 " -----Vundle Settings----- "
 " ------------------------- "
 
-set nocompatible                    " be iMproved, required
-filetype off                        " required
-set rtp+=~/.vim/bundle/Vundle.vim   " set the runtime path to include Vundle and initialize
+set nocompatible                        " be iMproved, required
+filetype off                            " required
+set rtp+=~/.vim/bundle/Vundle.vim       " set the runtime path to include Vundle and initialize
 call vundle#begin()
 
-Plugin 'VundleVim/Vundle.vim'       " Let Vundle manage Vundle, required.
-Plugin 'scrooloose/nerdtree'        " The NERD tree.
-Plugin 'morhetz/gruvbox'            " Retro groove color scheme for vim.
-Plugin 'yggdroot/indentline'        " A vim plugin to display the indention levels with thin vertical lines.
-Plugin 'tpope/vim-surround'         " Surround.vim: quoting/parenthesizing made simple
+Plugin 'VundleVim/Vundle.vim'           " Let Vundle manage Vundle, required.
+Plugin 'scrooloose/nerdtree'            " The NERD tree.
+Plugin 'morhetz/gruvbox'                " Retro groove color scheme for vim.
+Plugin 'yggdroot/indentline'            " A vim plugin to display the indention levels with thin vertical lines.
+Plugin 'tpope/vim-surround'             " Surround.vim: quoting/parenthesizing made simple
+Plugin 'luochen1990/rainbow'            " Rainbow Parentheses Improved.
+Plugin 'MarcWeber/vim-addon-mw-utils'   " For snipmate.
+Plugin 'tomtom/tlib_vim'
+Plugin 'garbas/vim-snipmate'
+Plugin 'honza/vim-snippets'             " Vim-snipmate default snippets (Previously snipmate-snippets).
 
-call vundle#end()                   " required
-filetype plugin indent on           " required
+call vundle#end()                       " required
+filetype plugin indent on               " required
 
 "
 " Brief help
@@ -59,13 +64,16 @@ set incsearch                       " Cursor jump when search matched word.
 syntax enable                       " Syntax highlight on.
 
 " ------------------------- "
-" ----Plugin Management---- "
+" -----Plugin Settings----- "
 " ------------------------- "
 
+let g:rainbow_active = 1                    " 0 if you want to enable it later via :RainbowToggle
+let g:snipMate = { 'snippet_version' : 1 }  " The legacy parser, version 0, is deprecated.
 
 " ------------------------- "
 " ---Theme & Appearance---- "
 " ------------------------- "
+
 set background=dark
 let g:gruvbox_contrast_dark  = "soft"
 colorscheme gruvbox                 " Set color scheme.
@@ -74,17 +82,20 @@ colorscheme gruvbox                 " Set color scheme.
 " ------------------------- "
 " ---Bindings & Commands--- "
 " ------------------------- "
+
 nnoremap <F4> :NERDTreeToggle<CR>
-inoremap " ""<left>
-inoremap ' ''<left>
-inoremap ( ()<left>
-inoremap [ []<left>
-inoremap < <><left>
-inoremap { {}<left>
+"inoremap " ""<left>
+"inoremap ' ''<left>
+"inoremap ( ()<left>
+"inoremap [ []<left>
+"inoremap < <><left>
+"inoremap { {}<left>
 
 " ------------------------- "
 " ----File Type Settings--- "
 " ------------------------- "
+
+au BufRead,BufNewFile *.sv set filetype=systemverilog   " SystemVerilog file type detection
 
 " ------------------------- "
 " -----Other Settings------ "
