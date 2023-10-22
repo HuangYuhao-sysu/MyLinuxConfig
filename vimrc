@@ -77,7 +77,7 @@ let g:snipMate = { 'snippet_version' : 1 }  " The legacy parser, version 0, is d
 set background=dark
 let g:gruvbox_contrast_dark  = "soft"
 colorscheme gruvbox                 " Set color scheme.
-
+set guifont=Monospace\ 12
 
 " ------------------------- "
 " ---Bindings & Commands--- "
@@ -95,8 +95,11 @@ inoremap { {}<left>
 " ----File Type Settings--- "
 " ------------------------- "
 
-au BufRead,BufNewFile *.sv *.v *.vh *.svh setfiletype=verilog_systemverilog " SystemVerilog file type detection
+au BufRead,BufNewFile *.sv *.v *.vh *.svh *.sva setf verilog_systemverilog " SystemVerilog file type detection
 
 " ------------------------- "
 " -----Other Settings------ "
 " ------------------------- "
+
+au VimEnter * :NERDTreeToggle | call feedkeys("\<C-W>\<Right>")
+au VimEnter * simalt ~x
