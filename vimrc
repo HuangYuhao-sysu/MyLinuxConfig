@@ -95,11 +95,11 @@ inoremap { {}<left>
 " ----File Type Settings--- "
 " ------------------------- "
 
-au BufRead,BufNewFile *.sv *.v *.vh *.svh *.sva setf verilog_systemverilog " SystemVerilog file type detection
+au BufRead,BufNewFile *.sv *.v *.vh *.svh *.sva setf verilog_systemverilog  " SystemVerilog file type detection
 
 " ------------------------- "
 " -----Other Settings------ "
 " ------------------------- "
 
-au VimEnter * :NERDTreeToggle | call feedkeys("\<C-W>\<Right>")
-au VimEnter * simalt ~x
+au VimEnter * :NERDTreeToggle | call feedkeys("\<C-W>\<Right>")             " Open NERDTree and goto right window when enter.
+au BufWritePre * :%s/\s+$//e                                                " Remove trailing whitespace when write file.
