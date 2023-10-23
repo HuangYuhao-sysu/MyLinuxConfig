@@ -33,6 +33,7 @@ Plugin 'tomtom/tlib_vim'
 Plugin 'garbas/vim-snipmate'
 Plugin 'honza/vim-snippets'             " Vim-snipmate default snippets (Previously snipmate-snippets).
 Plugin 'vhda/verilog_systemverilog.vim' " Verilog and SystemVerilog syntax plugin.
+Plugin 'vim-airline/vim-airline'        " lean & mean status/tabline for vim that's light as air
 
 call vundle#end()                       " required
 filetype plugin indent on               " required
@@ -78,6 +79,7 @@ set background=dark
 let g:gruvbox_contrast_dark  = "soft"
 colorscheme gruvbox                 " Set color scheme.
 set guifont=Monospace\ 12
+set colorcolumn=80
 
 " ------------------------- "
 " ---Bindings & Commands--- "
@@ -95,7 +97,7 @@ inoremap { {}<left>
 " ----File Type Settings--- "
 " ------------------------- "
 
-au BufRead,BufNewFile *.sv *.v *.vh *.svh *.sva setf verilog_systemverilog  " SystemVerilog file type detection
+au BufRead,BufNewFile *.sv*.v*.vh*.svh*.sva setf verilog_systemverilog  " SystemVerilog file type detection
 
 " ------------------------- "
 " -----Other Settings------ "
@@ -103,3 +105,4 @@ au BufRead,BufNewFile *.sv *.v *.vh *.svh *.sva setf verilog_systemverilog  " Sy
 
 au VimEnter * :NERDTreeToggle | call feedkeys("\<C-W>\<Right>")             " Open NERDTree and goto right window when enter.
 au BufWritePre * :%s/\s+$//e                                                " Remove trailing whitespace when write file.
+
