@@ -34,6 +34,8 @@ Plugin 'garbas/vim-snipmate'
 Plugin 'honza/vim-snippets'             " Vim-snipmate default snippets (Previously snipmate-snippets).
 Plugin 'vhda/verilog_systemverilog.vim' " Verilog and SystemVerilog syntax plugin.
 Plugin 'vim-airline/vim-airline'        " lean & mean status/tabline for vim that's light as air
+Plugin 'vim-airline/vim-airline-themes' " Themes for airline.
+"Plugin 'dense-analysis/ale'             " Check syntax in Vim asynchronously and fix files.
 
 call vundle#end()                       " required
 filetype plugin indent on               " required
@@ -68,8 +70,11 @@ syntax enable                       " Syntax highlight on.
 " -----Plugin Settings----- "
 " ------------------------- "
 
-let g:rainbow_active = 1                    " 0 if you want to enable it later via :RainbowToggle
-let g:snipMate = { 'snippet_version' : 1 }  " The legacy parser, version 0, is deprecated.
+let g:rainbow_active = 1                        " 0 if you want to enable it later via :RainbowToggle
+let g:snipMate = { 'snippet_version' : 1 }      " The legacy parser, version 0, is deprecated.
+let g:airline_theme = 'simple'                  " Set airline theme.
+let g:airline#extensions#tabline#enabled = 1    " Enable Smarter tab line.
+
 
 " ------------------------- "
 " ---Theme & Appearance---- "
