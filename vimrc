@@ -70,11 +70,21 @@ syntax enable                       " Syntax highlight on.
 " -----Plugin Settings----- "
 " ------------------------- "
 
-let g:rainbow_active = 1                        " 0 if you want to enable it later via :RainbowToggle
-let g:snipMate = { 'snippet_version' : 1 }      " The legacy parser, version 0, is deprecated.
-let g:airline_theme = 'simple'                  " Set airline theme.
-let g:airline#extensions#tabline#enabled = 1    " Enable Smarter tab line.
+let g:rainbow_active=1                          " 0 if you want to enable it later via :RainbowToggle
+let g:snipMate={ 'snippet_version' : 1 }        " The legacy parser, version 0, is deprecated.
+let g:airline_theme='simple'                    " Set airline theme.
+let g:airline#extensions#tabline#enabled=1      " Enable Smarter tab line.
 
+let b:match_words =
+    \ '\<begin\>:\<end\>,' .
+    \ '\<case\>\|\<casex\>\|\<casez\>:\<endcase\>,' .
+    \ '\<module\>:\<endmodule\>,' .
+    \ '\<if\>:\<else if\>:\<else\>,' .
+    \ '\<function\>:\<endfunction\>,' .
+    \ '`ifdef\>:`else\>:`endif\>,' .
+    \ '\<task\>:\<endtask\>,' .
+    \ '\<program\>:\<endprogram\>,' .
+    \ '\<specify\>:\<endspecify\>'
 
 " ------------------------- "
 " ---Theme & Appearance---- "
@@ -92,17 +102,15 @@ set colorcolumn=80
 
 nnoremap <F4> :NERDTreeToggle<CR>
 inoremap " ""<left>
-inoremap ' ''<left>
 inoremap ( ()<left>
 inoremap [ []<left>
-inoremap < <><left>
 inoremap { {}<left>
 
 " ------------------------- "
 " ----File Type Settings--- "
 " ------------------------- "
 
-au BufRead,BufNewFile *.sv*.v*.vh*.svh*.sva setf verilog_systemverilog  " SystemVerilog file type detection
+au BufRead,BufNewFile *.sv*.v*.vh*.svh*.sva setf verilog_systemverilog      " SystemVerilog file type detection
 
 " ------------------------- "
 " -----Other Settings------ "
@@ -110,4 +118,5 @@ au BufRead,BufNewFile *.sv*.v*.vh*.svh*.sva setf verilog_systemverilog  " System
 
 au VimEnter * :NERDTreeToggle | call feedkeys("\<C-W>\<Right>")             " Open NERDTree and goto right window when enter.
 au BufWritePre * :%s/\s+$//e                                                " Remove trailing whitespace when write file.
-
+set foldmethod=indent                                                       " Set fold.
+set foldlevel=99
