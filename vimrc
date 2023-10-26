@@ -62,7 +62,7 @@ set number                          " Show line number.
 set cursorline                      " Show cursor line.
 set cursorcolumn                    " Show cursor column.
 set incsearch                       " Cursor jump when search matched word.
-
+set mouse=a                         " Enable mouse in vim.
 
 syntax enable                       " Syntax highlight on.
 
@@ -92,7 +92,7 @@ let b:match_words =
 
 set background=dark
 let g:gruvbox_contrast_dark  = "soft"
-colorscheme gruvbox                 " Set color scheme.
+colorscheme gruvbox                     " Set color scheme.
 set guifont=Monospace\ 12
 set colorcolumn=80
 
@@ -110,8 +110,10 @@ inoremap { {}<left>
 " ----File Type Settings--- "
 " ------------------------- "
 
-au BufRead,BufNewFile *.sv*.v*.vh*.svh*.sva setf verilog_systemverilog      " SystemVerilog file type detection
+au BufRead,BufNewFile *.sv*.v*.vh*.svh*.sva setf verilog_systemverilog
 au BufRead,BufNewFile *yml setf yaml
+
+au FileType verilog_systemverilog call VerilogMappings()
 
 " ------------------------- "
 " -----Other Settings------ "
@@ -121,3 +123,11 @@ au VimEnter * :NERDTreeToggle | call feedkeys("\<C-W>\<Right>")             " Op
 au BufWritePre * :%s/\s+$//e                                                " Remove trailing whitespace when write file.
 set foldmethod=indent                                                       " Set fold.
 set foldlevel=99
+
+" ------------------------- "
+" ------My Functions------- "
+" ------------------------- "
+
+function! VerilogMappings()
+    inoremap < <=
+endfunction
