@@ -111,6 +111,7 @@ inoremap { {}<left>
 " ------------------------- "
 
 au BufRead,BufNewFile *.sv*.v*.vh*.svh*.sva setf verilog_systemverilog      " SystemVerilog file type detection
+au BufRead,BufNewFile *yml setf yaml
 
 " ------------------------- "
 " -----Other Settings------ "
