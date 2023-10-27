@@ -39,7 +39,8 @@ alias gco git checkout
 alias gl git log --decorate
 alias gpush git push origin main
 alias gpull git pull --rebase
-alias hyh cd ~/Desktop
+alias desk cd ~/Desktop
+alias home cd ~
 alias vimrc vim ~/.vimrc
 alias vimdir cd ~/.vim
 alias fast sudo ~/Desktop/fastgithub_linux-x64/fastgithub
@@ -57,4 +58,3 @@ set prompt = "%B%n@%m ${cwd} >"
 # ------------------------- #
 # ---------Set up---------- #
 # ------------------------- #
-hyh

@@ -62,7 +62,7 @@ set number                          " Show line number.
 set cursorline                      " Show cursor line.
 set cursorcolumn                    " Show cursor column.
 set incsearch                       " Cursor jump when search matched word.
-set mouse=a                         " Enable mouse in vim.
+set relativenumber                  " Use relative number for jumping convinence.
 
 syntax enable                       " Syntax highlight on.
 
@@ -105,6 +105,11 @@ inoremap " ""<left>
 inoremap ( ()<left>
 inoremap [ []<left>
 inoremap { {}<left>
+nnoremap H 0
+nnoremap L $
+vnoremap H 0
+vnoremap L $
+
 
 " ------------------------- "
 " ----File Type Settings--- "
