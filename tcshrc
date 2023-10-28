@@ -15,9 +15,9 @@
 # ------------------------- #
 # Set environment variables #
 # ------------------------- #
-setenv http_proxy http://127.0.0.1:38457
-setenv https_proxy http://127.0.0.1:38457
-
+#setenv http_proxy http://127.0.0.1:38457
+#setenv https_proxy http://127.0.0.1:38457
+source /etc/tcshrc
 
 # ------------------------- #
 # --Aliases and Shortcuts-- #
@@ -44,6 +44,7 @@ alias home cd ~
 alias vimrc vim ~/.vimrc
 alias vimdir cd ~/.vim
 alias fast sudo ~/Desktop/fastgithub_linux-x64/fastgithub
+alias snip cd ~/.vim/bundle/vim-snippets/snippets/
 
 # ------------------------- #
 # ---Customize the prompt-- #

@@ -109,7 +109,9 @@ nnoremap H 0
 nnoremap L $
 vnoremap H 0
 vnoremap L $
-
+inoremap jj <ESC><Right>
+inoremap <Tab> <C-n>
+inoremap <S-Tab> <Tab>
 
 " ------------------------- "
 " ----File Type Settings--- "
