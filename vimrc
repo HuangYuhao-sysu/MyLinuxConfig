@@ -62,7 +62,6 @@ set number                          " Show line number.
 set cursorline                      " Show cursor line.
 set cursorcolumn                    " Show cursor column.
 set incsearch                       " Cursor jump when search matched word.
-set relativenumber                  " Use relative number for jumping convinence.
 
 syntax enable                       " Syntax highlight on.
 
@@ -72,7 +71,7 @@ syntax enable                       " Syntax highlight on.
 
 let g:rainbow_active=1                          " 0 if you want to enable it later via :RainbowToggle
 let g:snipMate={ 'snippet_version' : 1 }        " The legacy parser, version 0, is deprecated.
-let g:airline_theme='simple'                    " Set airline theme.
+let g:airline_theme='solarized'                 " Set airline theme.
 let g:airline#extensions#tabline#enabled=1      " Enable Smarter tab line.
 
 let b:match_words =
@@ -110,8 +109,6 @@ nnoremap L $
 vnoremap H 0
 vnoremap L $
 inoremap jj <ESC><Right>
-inoremap <Tab> <C-n>
-inoremap <S-Tab> <Tab>
 
 " ------------------------- "
 " ----File Type Settings--- "
@@ -121,6 +118,7 @@ au BufRead,BufNewFile *.sv*.v*.vh*.svh*.sva setf verilog_systemverilog
 au BufRead,BufNewFile *yml setf yaml
 
 au FileType verilog_systemverilog call VerilogMappings()
+au FileType python call PythonMappings()
 
 " ------------------------- "
 " -----Other Settings------ "
@@ -137,4 +135,8 @@ set foldlevel=99
 
 function! VerilogMappings()
     inoremap < <=
+endfunction
+
+function! PythonMappings()
+    inoremap ' ''<left>
 endfunction

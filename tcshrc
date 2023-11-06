@@ -42,6 +42,7 @@ alias gpull git pull --rebase
 alias desk cd ~/Desktop
 alias home cd ~
 alias vimrc vim ~/.vimrc
+alias gvimrc gvim ~/.vimrc
 alias vimdir cd ~/.vim
 alias fast sudo ~/Desktop/fastgithub_linux-x64/fastgithub
 alias snip cd ~/.vim/bundle/vim-snippets/snippets/
