@@ -179,6 +179,65 @@ snippet //-
     //-------------------------
 # annotation 2
 snippet //--
-    //-------------------------------------------------------------------
+    //------------------------------------------------------------------------------
     // ${0}
-    //-------------------------------------------------------------------
+    //------------------------------------------------------------------------------
+# input logic
+snippet inp
+    input  logic
+# output logic
+snippet outp
+    output logic
+# parameter
+snippet para
+    parameter
+# flop_en
+snippet alffen
+    always_ff @(posedge clk or negedge reset_n) begin
+        if (~reset_n) begin
+            ${1:flop_name} <= '0;
+        end
+        else if ( $1_en ) begin
+            $1 <= $1_next;
+        end
+    end
+# flop_en
+snippet alff
+    always_ff @(posedge clk or negedge reset_n) begin
+        if (~reset_n) begin
+            ${1:flop_name} <= '0;
+        end
+        else begin
+            $1 <= $1_next;
+        end
+    end
+# `ifdef
+snippet `if
+    \`ifdef ${1:define}
+    \`endif
+snippet be
+    begin
+        ${1}
+    end
+# parameter
+snippet par
+    parameter 
+# gen
+snippet gen
+    generate;
+        
+    endgenerate
+# for
+snippet for
+    for (${1} = ; ; ) begin
+        
+    end
+# always_comb
+snippet alc
+    always_comb begin
+        ${1}
+    end
+snippet fun
+    function ${1:return_value name} (${2:port_list});
+        ${3}
+    endfunction
