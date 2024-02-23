@@ -17,7 +17,6 @@
 # ------------------------- #
 #setenv http_proxy http://127.0.0.1:38457
 #setenv https_proxy http://127.0.0.1:38457
-source /etc/tcshrc
 
 # ------------------------- #
 # --Aliases and Shortcuts-- #
@@ -60,3 +59,55 @@ set prompt = "%B%n@%m ${cwd} >"
 # ------------------------- #
 # ---------Set up---------- #
 # ------------------------- #
+setenv DVE_HOME /home/synopsys/vcs-mx/O-2018.09-1
+setenv VCS_HOME /home/synopsys/vcs-mx/O-2018.09-1
+setenv VERDI_HOME /home/synopsys/verdi/Verdi_O-2018.09-SP2
+setenv SCL_HOME /home/synopsys/scl/2018.06
+setenv DC_HOME /home/synopsys/syn/O-2018.06-SP1
+setenv LC_HOME /home/synopsys/lc/O-2018.06-SP1
+setenv SPYGLASS_HOME /home/synopsys/SpyGlass-L2016.06/SPYGLASS_HOME/
+setenv PT_HOME /home/synopsys/pts/O-2018.06-SP1
+setenv ICC2_HOME /home/synopsys/icc2/O-2018.06-SP1
+setenv SYNPLIFY_HOME /home/synopsys/fpga/N-2018.03-SP1
+setenv LD_LIBRARY_PATH "$VERDI_HOME/share/PLI/lib/LINUX64"
+setenv LD_LIBRARY_PATH "$VERDI_HOME/share/PLI/IUS/LINUX64/boot"
+
+#Synplify
+setenv PATH "${PATH}:$SYNPLIFY_HOME/bin"
+alias synplify "synplify"
+#PT
+setenv PATH "${PATH}:$PT_HOME/bin"
+alias pt "pt_shell"
+
+#ICC2
+setenv PATH "${PATH}:$ICC2_HOME/bin"
+alias icc2 "icc2_shell"
+
+#DC
+setenv PATH "${PATH}:$DC_HOME/bin"
+alias dc "dc_shell"
+alias dv "design_vision"
+
+#lib compile
+setenv PATH "${PATH}:$LC_HOME/bin"
+alias lc "lc_shell"
+
+#Spyglass
+setenv PATH "${PATH}:$SPYGLASS_HOME/bin"
+alias spyglass "spyglass"
+
+#Dve
+setenv PATH "${PATH}:$DVE_HOME/gui/dve/bin"
+alias dve="dve -full64"
+
+#VCS
+setenv PATH "${PATH}:$VCS_HOME/bin"
+alias vcs "vcs"
+
+#Verdi
+setenv PATH "${PATH}:$VERDI_HOME/bin"
+alias verdi "verdi"
+
+#scl
+setenv PATH "${PATH}:$SCL_HOME/linux64/bin"
+setenv VCS_ARCH_OVERRIDE linux
