@@ -133,10 +133,6 @@ set foldlevel=99
 " ------My Functions------- "
 " ------------------------- "
 
-function! VerilogMappings()
-    inoremap < <=
-endfunction
-
 function! PythonMappings()
     inoremap ' ''<left>
 endfunction
