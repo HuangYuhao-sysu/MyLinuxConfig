@@ -56,7 +56,33 @@ set prompt = "%B%n@%m ${cwd} >"
 # ----Define functions----- #
 # ------------------------- #
 
-
 # ------------------------- #
 # ---------Set up---------- #
 # ------------------------- #
+setenv LD_LIBRARY_PATH ""
+#export export SYNOPSYS "/usr/software/synopsys"
+setenv VCS_TARGET_ARCH "amd64"
+setenv PATH "/usr/hyh/software/vcs2018/vcs/O-2018.09-SP2/gui/dve/bin:$PATH"
+setenv DVE_HOME "/usr/hyh/software/vcs2018/vcs/O-2018.09-SP2/gui/dve"
+setenv PATH "/usr/hyh/software/vcs2018/vcs/O-2018.09-SP2/bin:$PATH"
+setenv VCS_HOME "/usr/hyh/software/vcs2018/vcs/O-2018.09-SP2"
+#export VCS_ARCH_OVERRIDE "linux"
+#verdi
+setenv PATH "/usr/hyh/software/verdi/verdi/Verdi_O-2018.09-SP2/bin:$PATH"
+setenv VERDI_HOME "/usr/hyh/software/verdi/verdi/Verdi_O-2018.09-SP2"
+setenv LD_LIBRARY_PATH "/usr/hyh/software/verdi/verdi/Verdi_O-2018.09-SP2/share/PLI/lib/LINUX64:$LD_LIBRARY_PATH"
+setenv VERDI_DIR "/usr/hyh/software/verdi/verdi/Verdi_O-2018.09-SP2"
+setenv NOVAS_INST_DIR "/usr/hyh/software/verdi/verdi/Verdi_O-2018.09-SP2"
+setenv NPI_PLATFORM "LINUX64_GNU_472"
+setenv LD_LIBRARY_PATH "$NOVAS_INST_DIR/share/NPI/lib/LINUX64_GNU_520:$LD_LIBRARY_PATH"
+setenv NOVAS_HOME "/usr/hyh/software/verdi/verdi/Verdi_O-2018.09-SP2"
+
+#LICENSE
+setenv SNPSLMD_LICENSE_FILE "/usr/hyh/software/Liscen/Synopsys.dat"
+setenv SNPSLMD_LICENSE_FILE 27000@hyh-virtual-machine
+setenv LM_LICENSE_FILE "/usr/hyh/software/Liscen/Synopsys.dat"
+
+alias lmli "setenv SNPSLMD_LICENSE_FILE '/usr/hyh/software/Liscen/Synopsys.dat' && /usr/hyh/software/SCL2018/scl/2018.06/linux64/bin/lmgrd -c /usr/hyh/software/License/Synopsys.dat && SNPSLMD_LICENSE_FILE 27000@hyh-virtual-machine"
+
+#SCL
+setenv PATH "/usr/hyh/software/SCL2018/scl/2018.06/linux64/bin:$PATH"
