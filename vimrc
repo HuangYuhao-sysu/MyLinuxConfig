@@ -20,8 +20,9 @@
 set nocompatible                        " be iMproved, required
 filetype off                            " required
 set rtp+=~/.vim/bundle/Vundle.vim       " set the runtime path to include Vundle and initialize
-call vundle#begin()
 
+" Vundle
+call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'           " Let Vundle manage Vundle, required.
 Plugin 'scrooloose/nerdtree'            " The NERD tree.
 Plugin 'morhetz/gruvbox'                " Retro groove color scheme for vim.
@@ -35,9 +36,10 @@ Plugin 'honza/vim-snippets'             " Vim-snipmate default snippets (Previou
 Plugin 'vhda/verilog_systemverilog.vim' " Verilog and SystemVerilog syntax plugin.
 Plugin 'vim-airline/vim-airline'        " lean & mean status/tabline for vim that's light as air
 Plugin 'vim-airline/vim-airline-themes' " Themes for airline.
-"Plugin 'dense-analysis/ale'             " Check syntax in Vim asynchronously and fix files.
-
+Plugin 'junegunn/vim-easy-align'        " Align
+"Plugin 'dense-analysis/ale'            " Check syntax in Vim asynchronously and fix files.
 call vundle#end()                       " required
+
 filetype plugin indent on               " required
 
 " Brief help
@@ -138,3 +140,18 @@ endfunction
 function! PythonMappings()
     inoremap ' ''<left>
 endfunction
+
+let g:easy_align_delimiters = {
+\ '>': { 'pattern': '>>\|=>\|>' },
+\ ',': { 'pattern': '[,]', 'stick_to_left': 0 },
+\ ';': { 'pattern': '[;]', 'stick_to_left': 0 },
+\ '/': { 'pattern': '//\+\|/\*\|\*/', 'delimiter_align': 'l', 'ignore_groups':   ['!Comment'] },
+\ ']': { 'pattern': '[[\]]', 'left_margin':   0, 'right_margin':  0, 'stick_to_left': 0 },
+\ ')': { 'pattern': '[()]', 'left_margin':   0, 'right_margin':  0, 'stick_to_left': 0 },
+\ 'd': { 'pattern': ' \(\S\+\s*[;=]\)\@=', 'left_margin':  0, 'right_margin': 0 }
+\ }
+
+"easyalign
+nmap ga <Plug>(EasyAlign)
+xmap ga <Plug>(EasyAlign)
+vmap <Enter> <Plug>(EasyAlign)
