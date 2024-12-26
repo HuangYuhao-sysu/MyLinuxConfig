@@ -1,8 +1,8 @@
 #/bin/bash
 
-cp ~/.tcshrc tcshrc
+cp ~/.bashrc bashrc
 cp ~/.gitconfig gitconfig
 cp ~/.vimrc vimrc
-find ~/.vim -name ".git*" -exec rm -rf {} +
+find ~/.vim -name ".git*" -exec rm -rf {}
 rm -rf vim
 cp -r ~/.vim vim
