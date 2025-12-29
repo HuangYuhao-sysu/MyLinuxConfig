@@ -200,14 +200,11 @@ snippet alffen
 			$1 <= $1_next;
 # flop_en
 snippet alff
-	always_ff @(posedge clk or negedge reset_n) begin
-		if (~reset_n) begin
+	always_ff @(posedge clk or negedge reset_n)
+		if (~reset_n)
 			${1:flop_name} <= '0;
-		end
-		else begin
+		else
 			$1 <= $1_next;
-		end
-	end
 # `ifdef
 snippet `if
 	\`ifdef ${1:define}
