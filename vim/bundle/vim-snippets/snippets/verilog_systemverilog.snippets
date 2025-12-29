@@ -193,14 +193,11 @@ snippet para
 	parameter
 # flop_en
 snippet alffen
-	always_ff @(posedge clk or negedge reset_n) begin
-		if (~reset_n) begin
+	always_ff @(posedge clk or negedge reset_n)
+		if (~reset_n)
 			${1:flop_name} <= '0;
-		end
-		else if ( $1_en ) begin
+		else if ( $1_en )
 			$1 <= $1_next;
-		end
-	end
 # flop_en
 snippet alff
 	always_ff @(posedge clk or negedge reset_n) begin

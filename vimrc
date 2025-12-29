@@ -56,10 +56,10 @@ filetype plugin indent on                  " required
 " ------------------------- "
 
 set encoding=utf-8                  " File coded with UTF-8.
-set tabstop=4                       " 4 spaces represent a tab.
-set shiftwidth=4                    " Set indent width to 4 spaces.
+set tabstop=2                       " 4 spaces represent a tab.
+set shiftwidth=2                    " Set indent width to 4 spaces.
 set expandtab                       " Expand tab to spaces.
-set softtabstop=4                   " Backspace 4 spaces.
+set softtabstop=2                   " Backspace 4 spaces.
 set autoindent                      " Indent consistent with last line.
 set number                          " Show line number.
 set cursorline                      " Show cursor line.
@@ -128,7 +128,7 @@ au FileType python call PythonMappings()
 " ------------------------- "
 
 au VimEnter * :NERDTreeToggle | call feedkeys("\<C-W>\<Right>")             " Open NERDTree and goto right window when enter.
-au BufWritePre * :%s/\s+$//e                                                " Remove trailing whitespace when write file.
+"au BufWritePre * :%s/\s+$//e                                                 Remove trailing whitespace when write file.
 set foldmethod=indent                                                       " Set fold.
 set foldlevel=99
 
